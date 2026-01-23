@@ -2,11 +2,14 @@ services:
   - type: web
     name: oauth-backend
     env: python
+    # 🔥 Python 버전 명시적 지정
+    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
+      # 🔥 Python 버전 환경 변수 (3.11.9로 변경)
       - key: PYTHON_VERSION
-        value: 3.11.0
+        value: 3.11.9
       - key: ENV
         value: production
       # 나머지 환경 변수는 Render 대시보드에서 설정
