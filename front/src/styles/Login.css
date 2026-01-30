@@ -16,7 +16,8 @@
 
 .login-title {
   margin-bottom: 30px;
-  text-align: center;
+  text-align: center;\
+  color: #111;
 }
 
 .google-login-btn {
@@ -45,3 +46,4 @@
   color: #666;
   text-align: center;
 }
+
