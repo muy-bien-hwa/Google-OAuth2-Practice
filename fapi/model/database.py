@@ -3,6 +3,7 @@
 구글로 로그인한 사용자 정보를 저장하는 테이블을 만듭니다.
 """
 
+import os
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -66,3 +67,4 @@ def get_db():
     finally:
 
         db.close()  # 👈 작업 끝나면 자동으로 닫기
+
