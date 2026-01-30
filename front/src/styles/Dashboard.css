@@ -1,0 +1,107 @@
+/* 공통 */
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 로딩 */
+.loading-box {
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #4285f4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+/* 에러 */
+.error-box {
+  background-color: #ffebee;
+  padding: 20px;
+  border-radius: 8px;
+  color: #c62828;
+}
+
+/* 대시보드 */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+.dashboard-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 40px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-card {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.field .value {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.info-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 14px;
+  color: #1565c0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
