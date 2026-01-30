@@ -14,7 +14,7 @@ const Dashboard = () => {
         const fetchUserInfo = async () => {
             try {
                 const response = await axios.get(
-                    'http://localhost:8000/auth/me',
+                    `${import.meta.env.VITE_BACKEND_URL}/auth/me`,
                     { withCredentials: true }
                 );
                 setUser(response.data);
