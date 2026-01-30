@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 
 # SQLite 데이터베이스 파일 경로
 # 👉 실제 프로덕션에서는 PostgreSQL, MySQL 등을 사용
-DATABASE_URL = "postgresql://postgres:admin@localhost:5432/test_relay_story"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # 데이터베이스 엔진 생성
 engine = create_engine(DATABASE_URL)
@@ -64,4 +64,5 @@ def get_db():
     try:
         yield db  # 👈 이 부분에서 DB 세션을 전달
     finally:
+
         db.close()  # 👈 작업 끝나면 자동으로 닫기
